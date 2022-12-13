@@ -21,6 +21,9 @@ var indexRouter = require("./routes/index");
 //Load the environment variables from the .env file
 require("dotenv").config();
 
+//Importing the cronJob module
+require("./CornJob.js");
+
 //Creating the express app
 var app = express();
 
