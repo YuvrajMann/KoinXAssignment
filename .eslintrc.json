@@ -1,3 +1,6 @@
+// This file is used to configure the ESLint linter.
+// For a list of available rules, see https://eslint.org/docs/rules/
+
 {
     "env": {
         "browser": true,
@@ -13,8 +16,12 @@
     },
     "plugins": ["react"],
     "rules": {
-        "indent": ["warn", "tab"],
-        "quotes": ["error", "single"],
-        "semi": ["error", "always"]
+        "No-console":2,                   
+        "comma-dangle": 1,               
+        "Quotes":2,
+        "quotes":[2, "double"],
+        "Linebreak-style":0,      
+        "no-unused-vars": 0,             
+        "max-len": 0
     }
 }
