@@ -24,6 +24,26 @@ require("dotenv").config();
 //Importing the cronJob module
 require("./CornJob.js");
 
+//The database is accessed using the connection string stored in the .env file
+//The useNewUrlParser and useUnifiedTopology options are used to avoid deprecation warnings
+//The connect method returns a promise
+const connect = mongoose.connect(process.env.MONGO_URL, {
+	useNewUrlParser: true,
+	useUnifiedTopology: true
+});
+
+//The then method is used to handle the promise
+//The first parameter is a callback function that is called when the promise is resolved
+//The second parameter is a callback function that is called when the promise is rejected
+connect.then(
+	(db) => {
+		console.log("Connected to mongodb server");
+	},
+	(err) => {
+		console.log(err);
+	}
+);
+
 //Creating the express app
 var app = express();
 
