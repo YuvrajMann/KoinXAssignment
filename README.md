@@ -58,8 +58,8 @@ RESPONSE : {
 
 ```
 
-## CORN Job
-A corn job that will run every 10 minutes to update the Ethereum price in the database is developed
+## CRON (Command Run On (UNIX scheduler) Job
+A cron job that will run every 10 minutes to update the Ethereum price in the database is developed
 
 ## Setup Instructions 
 1. Clone the repository in your local PC using ```git clone https://github.com/YuvrajMann/KoinXAssignment.git```
@@ -73,7 +73,7 @@ A corn job that will run every 10 minutes to update the Ethereum price in the da
 
 ## Other Tasks
 1. Deployed mongoDb database to Free Tier Shared Mongo Atlas cloud database at - mongodb+srv://yuvraj:encyclopedi@cluster0.4imevyc.mongodb.net/koinx?retryWrites=true&w=majority
-2. Deplyed the app using at - 
+2. Deplyed the app using at - <a>https://uninterested-tan-dibbler.cyclic.app/transactions/</a>
 
 ## Coding Standard 
 1. Eslinters along with husky-pre commit setted up
