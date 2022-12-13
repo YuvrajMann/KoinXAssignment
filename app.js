@@ -17,6 +17,7 @@ var mongoose = require("mongoose");
 
 //Importing all the routes
 var indexRouter = require("./routes/index");
+var transactionRouter = require("./routes/transactions");
 
 //Load the environment variables from the .env file
 require("dotenv").config();
@@ -68,6 +69,8 @@ app.use(express.static(path.join(__dirname, "public")));
 //The app.use method is used to use a router
 //The index router is used for all the routes starting with /
 app.use("/", indexRouter);
+// The transactions router is used for all the routes starting with /transactions
+app.use("/transactions", transactionRouter);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
