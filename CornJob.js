@@ -3,6 +3,9 @@ var cron = require("node-cron");
 var axios = require("axios");
 var EthereumPrice = require("./models/EthereumPriceModel");
 
+// Run the 'fetchEthereumPrice' function once when the server starts
+fetchEthereumPrice();
+
 // schedule a corn job to run the 'fetchEthereumPrice' function every 10 minutes
 cron.schedule("*/10 * * * *", function () {
 	fetchEthereumPrice();

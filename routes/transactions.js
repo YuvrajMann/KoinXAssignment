@@ -116,7 +116,7 @@ router.get("/getBalance/:userAddress", async function (req, res, next) {
 		//Send the user's balance, ethereum price and currency to the client
 		res.send({
 			balance: balance,
-			ethereumPrice: ethereumPriceData[0].price,
+			ethereumPrice: ethereumPriceData[0]?.price,
 			currency: "INR"
 		});
 	} catch (err) {

@@ -72,7 +72,7 @@ A corn job that will run every 10 minutes to update the Ethereum price in the da
 4. Run the server using ```npm start``` command
 
 ## Other Tasks
-1. Deployed database to Mongo Atlas at - 
+1. Deployed mongoDb database to Free Tier Shared Mongo Atlas cloud database at - mongodb+srv://yuvraj:encyclopedi@cluster0.4imevyc.mongodb.net/koinx?retryWrites=true&w=majority
 2. Deplyed the app using at - 
 
 ## Coding Standard 
