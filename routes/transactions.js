@@ -83,5 +83,47 @@ router.get("/:userAddress", async function (req, res, next) {
 	}
 });
 
+// The router handles the /transactions/getBalance/userAddress route
+// It fetches the current ethereum price from the database
+// It then calculates the user's balance and sends it to the client
+
+router.get("/getBalance/:userAddress", async function (req, res, next) {
+	try {
+		//Get the user address from the request
+		let userAddress = req.params.userAddress;
+		//Get the user from the database and populate the transactions field
+		let trasaction = await Users.find({ user_address: userAddress }).populate(
+			"transactions"
+		);
+		//Get the user's transactions
+		let transactionData = trasaction[0].transactions;
+		//Calculate the user's balance
+		let balance = 0;
+		/*
+    Loop through the transactions and 
+    add the value to the balance if the transaction is a deposit 
+    and subtract the value if the transaction is a withdrawal
+    */
+		for (let i = 0; i < transactionData.length; i++) {
+			if (transactionData[i].to == userAddress) {
+				balance += parseInt(transactionData[i].value);
+			} else {
+				balance -= parseInt(transactionData[i].value);
+			}
+		}
+		//Get the ethereum price from the database
+		let ethereumPriceData = await EthereumPriceModel.find({});
+		//Send the user's balance, ethereum price and currency to the client
+		res.send({
+			balance: balance,
+			ethereumPrice: ethereumPriceData[0].price,
+			currency: "INR"
+		});
+	} catch (err) {
+		console.log(err);
+		next(err);
+	}
+});
+
 //Export the router
 module.exports = router;
