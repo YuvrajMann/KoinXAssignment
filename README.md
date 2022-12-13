@@ -73,7 +73,7 @@ A cron job that will run every 10 minutes to update the Ethereum price in the da
 
 ## Other Tasks
 1. Deployed mongoDb database to Free Tier Shared Mongo Atlas cloud database at - mongodb+srv://yuvraj:encyclopedi@cluster0.4imevyc.mongodb.net/koinx?retryWrites=true&w=majority
-2. Deplyed the app using at - <a>https://uninterested-tan-dibbler.cyclic.app/transactions/</a> using <a href="https://www.cyclic.sh/">cyclic</a>
+2. Deplyed the app using at - <a>https://uninterested-tan-dibbler.cyclic.app/</a> using <a href="https://www.cyclic.sh/">cyclic</a>
 
 ## Coding Standard 
 1. Eslinters along with husky-pre commit setted up
