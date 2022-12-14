@@ -4,8 +4,8 @@ Developed By - Yuvraj Mann (Enginnering Student @UIET PU
 
 ## Routes Developed :-
 ```
-GET /transactions/0xce94e5621a5f7068253c42558c147480f38b5e0d HTTP/1.1
-Host: localhost:3000
+GET https://uninterested-tan-dibbler.cyclic.app/transactions/:user_address HTTP/1.1
+Host: uninterested-tan-dibbler.cyclic.app
 
 RESPONSE : {
   [
@@ -47,8 +47,8 @@ RESPONSE : {
 
 -------------------------------------------------------------------------------------------------
 
-GET /transactions/getBalance/0xce94e5621a5f7068253c42558c147480f38b5e0d HTTP/1.1
-Host: localhost:3000
+GET https://uninterested-tan-dibbler.cyclic.app/transactions/getBalance/:user_address HTTP/1.1
+Host: uninterested-tan-dibbler.cyclic.app
 
 RESPONSE : {
     "balance": 23661628529389250,
